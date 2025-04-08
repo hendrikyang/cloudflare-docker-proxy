@@ -18,6 +18,9 @@ const routes = {
 
   // staging
   ["docker-staging." + CUSTOM_DOMAIN]: dockerHub,
+  // more
+  ["github" + CUSTOM_DOMAIN]: "https://github.com",
+  ["v2ex" + CUSTOM_DOMAIN]: "https://v2ex.com",
 };
 
 function routeByHosts(host) {
@@ -158,12 +161,12 @@ function responseUnauthorized(url) {
   if (MODE == "debug") {
     headers.set(
       "Www-Authenticate",
-      `Bearer realm="http://${url.host}/v2/auth",service="cloudflare-docker-proxy"`
+      `Bearer realm="http://${url.host}/v2/auth",service="yang"`,
     );
   } else {
     headers.set(
       "Www-Authenticate",
-      `Bearer realm="https://${url.hostname}/v2/auth",service="cloudflare-docker-proxy"`
+      `Bearer realm="https://${url.hostname}/v2/auth",service="yang"`,
     );
   }
   return new Response(JSON.stringify({ message: "UNAUTHORIZED" }), {

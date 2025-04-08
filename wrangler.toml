@@ -1,4 +1,4 @@
-name = "cloudflare-docker-proxy"
+name = "yang"
 compatibility_date = "2023-12-01"
 
 [dev]
@@ -7,7 +7,7 @@ port = 8787
 local_protocol = "http"
 
 [env.vars]
-CUSTOM_DOMAIN = "libcuda.so"
+CUSTOM_DOMAIN = "signalyc.online"
 
 [env.dev.vars]
 MODE = "debug"
@@ -15,7 +15,7 @@ TARGET_UPSTREAM = "https://registry-1.docker.io"
 CUSTOM_DOMAIN = "exmaple.com"
 
 [env.production]
-name = "cloudflare-docker-proxy"
+name = "yang"
 # routes = [
 #   { pattern = "docker.libcuda.so", custom_domain = true },
 #   { pattern = "quay.libcuda.so", custom_domain = true },
@@ -31,7 +31,7 @@ MODE = "production"
 TARGET_UPSTREAM = ""
 
 [env.staging]
-name = "cloudflare-docker-proxy-staging"
+name = "yang-staging"
 # route = { pattern = "docker-staging.libcuda.so", custom_domain = true }
 
 [env.staging.vars]
