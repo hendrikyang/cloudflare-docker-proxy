@@ -7,20 +7,17 @@ const dockerHub = "https://registry-1.docker.io";
 
 const routes = {
   // production
-  ["docker." + CUSTOM_DOMAIN]: dockerHub,
-  ["quay." + CUSTOM_DOMAIN]: "https://quay.io",
-  ["gcr." + CUSTOM_DOMAIN]: "https://gcr.io",
-  ["k8s-gcr." + CUSTOM_DOMAIN]: "https://k8s.gcr.io",
-  ["k8s." + CUSTOM_DOMAIN]: "https://registry.k8s.io",
-  ["ghcr." + CUSTOM_DOMAIN]: "https://ghcr.io",
-  ["cloudsmith." + CUSTOM_DOMAIN]: "https://docker.cloudsmith.io",
-  ["ecr." + CUSTOM_DOMAIN]: "https://public.ecr.aws",
+  ["docker.signalyc.online"]:  "https://registry-1.docker.io",
+  ["quay.signalyc.online"]: "https://quay.io",
+  ["gcr.signalyc.online"]: "https://gcr.io",
+  ["k8s-gcr.signalyc.online"]: "https://k8s.gcr.io",
+  ["k8s.signalyc.online"]: "https://registry.k8s.io",
+  ["ghcr.signalyc.online"]: "https://ghcr.io",
+  ["cloudsmith.signalyc.online"]: "https://docker.cloudsmith.io",
+  ["ecr.signalyc.online"]: "https://public.ecr.aws",
 
   // staging
-  ["docker-staging." + CUSTOM_DOMAIN]: dockerHub,
-  // more
-  ["github" + CUSTOM_DOMAIN]: "https://github.com",
-  ["v2ex" + CUSTOM_DOMAIN]: "https://v2ex.com",
+  ["docker-staging.signalyc.online"]: "https://registry-1.docker.io",
 };
 
 function routeByHosts(host) {
